@@ -8,6 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class BookController {
 
+	// http://localhost:9090/welcome?name=java&author=ashok
 	@GetMapping(value="/welcome")
 	public ModelAndView getBookData(@RequestParam String name, String author) {
 		ModelAndView mav=new ModelAndView();
