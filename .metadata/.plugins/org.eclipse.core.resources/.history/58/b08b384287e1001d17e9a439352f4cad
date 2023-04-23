@@ -1,0 +1,26 @@
+package com.basic.controller;
+
+import java.util.Date;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class DateController {
+
+	@GetMapping(value="/date")
+	public ModelAndView date() {
+		
+		Date d=new Date();
+		ModelAndView mav=new ModelAndView();
+		
+		
+		mav.addObject("welcome","");
+		
+		return mav;
+		
+		
+	}
+	
+}

@@ -1,0 +1,27 @@
+package com.basic.controller;
+
+import java.time.LocalDate;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class DateController {
+
+	@GetMapping(value="/date")
+	public ModelAndView date() {
+		 
+		
+		LocalDate date=LocalDate.now();
+		String todayDate="today date is:"+ d;
+		ModelAndView mav=new ModelAndView();
+		mav.addObject("welcome",todayDate);
+		mav.setViewName("index");
+		
+		return mav;
+		
+		
+	}
+	
+}
